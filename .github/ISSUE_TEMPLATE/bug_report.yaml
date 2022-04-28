@@ -1,0 +1,35 @@
+name: Bug report
+description: Berichte einen Fehler
+labels: ['Class: Bug']
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung des Problems
+      description: Bitte beschreibe genaustens das Problem
+      placeholder: Eine genaue Beschreibung des Problems..
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduzierung
+      description: Bite beschreibe wie man das Problem reproduziert
+      placeholder: Eine genaue step-by-step Liste um das Problem zu reproduzieren..
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Eigentliches Verhalten
+      description: Beschreibe was eigentlich hätte passieren sollen
+      placeholder: Eine genaue Beschreibung was hätte passieren sollen..
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Zusätzlicher Kontext
+      description: Gibt es sonst noch was zu wissen?
+      placeholder: Zusätzliche Informationen..
