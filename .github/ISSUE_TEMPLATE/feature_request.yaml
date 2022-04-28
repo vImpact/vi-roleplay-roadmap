@@ -1,0 +1,19 @@
+name: Neues Feature
+description: Frage neue Features an
+labels: ['Gamedesign']
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibe deinen Wunsch
+      description: Bitte detailliert deinen Wunsch wiedergeben
+      placeholder: Detaillierte Beschreibung..
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Zusätzlicher Kontext
+      description: Gibt es noch etwas hinzuzufügen?
+      placeholder: Alles weitere hier rein..
