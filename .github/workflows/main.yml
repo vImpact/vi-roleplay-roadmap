@@ -11,4 +11,4 @@ jobs:
           token: ${{ secrets.PAT }}
           project-location: vImpact
           project-name: IMPACT Roadmap
-          column-name: No Status
+          column-name: Autofill
