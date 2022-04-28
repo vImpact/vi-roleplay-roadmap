@@ -1,14 +1,19 @@
+name: Auto Assign to Project(s)
+
 on:
   issues:
     types: [opened]
+env:
+  MY_GITHUB_TOKEN: ${{ secrets.PAT }}
+
 jobs:
-  createCard:
+  assign_one_project:
     runs-on: ubuntu-latest
+    name: Assign to One Project
     steps:
-      - name: Create or Update Project Card
-        uses: peter-evans/create-or-update-project-card@v2.0.0
-        with:
-          token: ${{ secrets.PAT }}
-          project-location: vImpact
-          project-name: IMPACT Roadmap
-          column-name: Autofill
+    - name: Assign NEW issues and NEW pull requests to project 2
+      uses: srggrs/assign-one-project-github-action@1.2.1
+      if: github.event.action == 'opened'
+      with:
+        project: 'https://github.com/orgs/vImpact/projects/2/views/1'
+        column_name: 'Autofill'
