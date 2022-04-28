@@ -1,6 +1,6 @@
 name: Bug report
 description: Berichte einen Fehler
-labels: ['Class: Bug']
+labels: ['Bug']
 
 body:
   - type: textarea
